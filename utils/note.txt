@@ -1,0 +1,25 @@
+平均points的数量：14611.3
+平均surface的数量：1658
+
+对于每个点：
+x y z 归一化+ tsdf + height归一化 
+
+[2048+8192,5]
+
+计算NYU数据集：
+从Shapeconv计算得到encoding
+
+[x,y,z,tsdf, height, 1,0,0,0,0,0,0,0,0,0,0,0]
+
+
+12 
+1. 网络结构：
+surface points: [240,144,240]
+inside points [60,36,60] ====>self-attention 模块
+
+
+{
+surface points: [x,y,z,tsdf,height,  1 0 0 0 0 0 0 0 0 0 0 0]
+inside   points: [x,y,z,tsdf,height,  0 0 0 0 0 0 0 0 0 0 0 0] 
+
+}
